@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unburden - Anonymous Confessions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>The Void Hears All</h1>
+            <p>Share your secret, your regret, your joy. Release it into the void. Anonymously.</p>
+            <a href="#submit" class="cta-button">Share Your Secret</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="confessions" class="container">
+            <h2>Recent Confessions</h2>
+            <div class="confessions-grid">
+                <!-- Sample Confession 1 -->
+                <div class="confession-card">
+                    <p>"I still think about my first dog every single day. I miss him more than some family members."</p>
+                </div>
+                <!-- Sample Confession 2 -->
+                <div class="confession-card">
+                    <p>"I secretly ate the entire 'share size' bag of chips I bought for movie night before my partner got home. I hid the evidence at the bottom of the trash."</p>
+                </div>
+                <!-- Sample Confession 3 -->
+                <div class="confession-card">
+                    <p>"Sometimes when I'm on a video call, I'm actually playing a game on my phone just out of frame. No one has ever noticed."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="submit" class="container">
+            <h2>Submit Anonymously</h2>
+            <p>Your message will be posted publicly. Do not include any personal or identifying information. This is a one-way trip into the void.</p>
+            
+            <form action="#" method="post" class="confession-form">
+                <div class="form-group">
+                    <label for="message">Your Confession</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Type your anonymous confession here..." required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Release into the Void</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>All confessions are user-submitted and anonymous. Content is not moderated.</p>
+            <p>&copy; 2026 Unburden. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+:root {
+    --background-color: #1a1a1a; /* Very Dark Gray */
+    --surface-color: #2c2c2c;  /* Dark Gray for cards/forms */
+    --primary-accent: #bb86fc; /* Soft Purple for accents */
+    --text-color: #e1e1e1;     /* Off-white for readability */
+    --light-color: #ffffff;    /* Pure White for highlights */
+}
+
+/* --- Basic Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: var(--light-color);
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x600/1a1a1a/2c2c2c?text=') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--surface-color);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* --- Buttons --- */
+.cta-button {
+    display: inline-block;
+    background: var(--primary-accent);
+    color: #000;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a056f7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Confession Cards --- */
+.confessions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.confession-card {
+    background: var(--surface-color);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-style: italic;
+}
+
+/* --- Confession Form --- */
+.confession-form {
+    margin-top: 30px;
+    max-width: 100%;
+    background: var(--surface-color);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--light-color);
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #1a1a1a;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+/* --- Footer --- */
+.footer {
+    background: #000;
+    color: #888;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
